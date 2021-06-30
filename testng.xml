@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+    <test name="Android Pixel">
+        <listeners>
+            <listener class-name="com.helloselenium.listeners.TestListener"/>
+        </listeners>
+        <parameter name="emulator" value="true"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="deviceName" value="Pixel_3a_API_30_x86"/>
+        <parameter name="systemPort" value="10001"/>
+        <parameter name="chromeDriverPort" value="11001"/>
+        <classes>
+            <class name="com.helloselenium.tests.android.LoginTests"></class>
+        </classes>
+    </test>
+    <test name="iPhone 11">
+        <listeners>
+            <listener class-name="com.helloselenium.listeners.TestListener"/>
+        </listeners>
+        <parameter name="platformName" value="iOS"/>
+        <parameter name="udid" value="54FF9453-78EA-46A0-9A19-92DBDC47FD70"/>
+        <parameter name="deviceName" value="iPhone 11"/>
+        <parameter name="wdaLocalPort" value="10001"/>
+        <parameter name="webkitDebugProxyPort" value="11001"/>
+        <classes>
+            <class name="com.helloselenium.tests.ios.LoginTests"></class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
